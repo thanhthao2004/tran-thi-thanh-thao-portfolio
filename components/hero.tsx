@@ -67,9 +67,9 @@ export function Hero() {
         {/* Title badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
           <Badge className="text-sm bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30 flex items-center gap-1.5"><Database className="h-3.5 w-3.5" /> Data Engineer</Badge>
-          <span className="text-muted-foreground">·</span>
+          <span className="text-muted-foreground hidden sm:inline">·</span>
           <Badge className="text-sm bg-emerald-500/20 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500/30 flex items-center gap-1.5"><LineChart className="h-3.5 w-3.5" /> Data Analyst</Badge>
-          <span className="text-muted-foreground">·</span>
+          <span className="text-muted-foreground hidden sm:inline">·</span>
           <Badge className="text-sm bg-violet-500/20 text-violet-300 border-violet-500/30 hover:bg-violet-500/30 flex items-center gap-1.5"><Briefcase className="h-3.5 w-3.5" /> Business Analyst</Badge>
         </div>
 
@@ -121,4 +121,11 @@ export function Hero() {
       {/* Scroll Indicator */}
       <button
         onClick={handleScrollToWork}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors 
+        className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors animate-bounce"
+        aria-label="Scroll to content"
+      >
+        <ArrowDown className="h-6 w-6" />
+      </button>
+    </section>
+  )
+}

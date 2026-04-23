@@ -38,9 +38,9 @@ export function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 scroll-mt-20"
+      className="section-shell scroll-mt-20"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="section-container">
         {/* Section Header */}
         <div
           className={cn(
@@ -94,7 +94,7 @@ export function AboutSection() {
                 {about.highlights.map((h) => (
                   <div key={h.label} className="bg-background/50 rounded-lg p-2.5 text-center">
                     <p className="text-xl font-bold text-primary">{h.value}</p>
-                    <p className="text-[11px] text-muted-foreground leading-tight mt-0.5">{h.label}</p>
+                    <p className="text-xs text-muted-foreground leading-tight mt-0.5">{h.label}</p>
                   </div>
                 ))}
               </div>

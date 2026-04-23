@@ -30,16 +30,16 @@ export function CertificationsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
+      className="section-shell"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="section-header">
           <p className="text-primary font-medium mb-2">Credentials</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="section-title">
             Certifications
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-description">
             Professional certifications validating expertise in project management, data science and cloud analytics.
           </p>
         </div>
@@ -82,4 +82,6 @@ export function CertificationsSection() {
           ))}
         </div>
       </div>
-    </sectio
+    </section>
+  )
+}
