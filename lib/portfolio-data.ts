@@ -73,51 +73,51 @@ export const experience = {
 }
 
 export const featuredProject = {
-  title: "Lakehouse Integrator — Event-Driven Ingestion Control Plane",
-  subtitle: "Thesis Project | Data Infrastructure",
+  title: "Lakehouse Integrator: Event-Driven CDC Orchestration Plane",
+  subtitle: "Engineering Thesis | Real-Time Data Infrastructure",
   description:
-    "An event-driven ingestion control plane designed to capture Change Data Capture (CDC) streams from relational databases (specifically SQL Server) and sink them into an Apache Iceberg table format via a Nessie catalog. It acts as an orchestration and metadata layer, routing RDBMS schema metadata into the system and launching SeaTunnel (Zeta) jobs for execution.",
-  role: "Data Architect & Platform Engineer",
+    "A sophisticated, multi-tenant orchestration layer engineered to automate Change Data Capture (CDC) from heterogeneous RDBMS sources into an Apache Iceberg lakehouse. The platform serves as a high-performance control plane, transforming database transaction logs into actionable analytical datasets via SeaTunnel (Zeta) and the Nessie catalog.",
+  role: "Data Architect & Lead Platform Engineer",
   duration: "2025 — Present",
-  impact: "Orchestrates scalable CDC ingestion from heterogeneous RDBMS sources into a multi-tenant lakehouse architecture.",
+  impact: "Streamlines real-time data ingestion for multi-tenant environments with automated schema discovery and resilient job orchestration.",
   privateNote: "This project is a collaborative thesis and the GitHub repository is kept private during the submission period.",
   githubUrl: "https://github.com/thanhthao2004",
   architectureZones: [
     {
-      name: "Control Plane",
-      purpose: "Orchestration & Metadata",
+      name: "Orchestration Plane",
+      purpose: "Metadata & Lifecycle Management",
       engine: "Spring Boot",
-      description: "Handles metadata discovery, async job submission, and execution state tracking.",
+      description: "Centralized orchestrator managing JDBC metadata discovery, asynchronous job scheduling, and live execution monitoring.",
     },
     {
-      name: "Execution Engine",
-      purpose: "CDC Ingestion",
+      name: "Data Ingestion Engine",
+      purpose: "CDC & Stream Processing",
       engine: "SeaTunnel (Zeta)",
-      description: "Dynamically compiles job manifests to ingest data from RDBMS transaction logs into Iceberg.",
+      description: "Distributed execution engine that dynamically compiles job manifests to synchronize SQL Server transaction logs with Iceberg tables.",
     }
   ],
   capabilities: [
     {
-      title: "Event-Driven Orchestration",
+      title: "Reactive Pipeline Orchestration",
       description:
-        "Unified PipelineSubmitter emits async events for post-commit job dispatch, tracking state transitions via WebSockets for real-time UI updates.",
+        "Leverages an asynchronous event-driven model to dispatch SeaTunnel jobs post-commit, ensuring high system availability and real-time status updates via WebSockets.",
     },
     {
-      title: "Automated Metadata Discovery",
+      title: "Self-Service Metadata Discovery",
       description:
-        "JDBC-based crawler inspects MySQL, PostgreSQL, and SQL Server schemas, persisting entity relationships for self-service ingestion mapping.",
+        "Automated JDBC-based crawler that introspects MySQL, PostgreSQL, and SQL Server schemas to build a dynamic inventory of business entities for rapid integration.",
     },
     {
-      title: "Secure Multi-Tenancy",
+      title: "Enterprise-Grade Tenancy",
       description:
-        "Thread-local TenantContext isolates platform operations, with explicit memory clearing of decrypted JDBC secrets post-execution.",
+        "Strict resource isolation via thread-local TenantContexts and high-security credential management, featuring explicit memory purging of sensitive JDBC secrets.",
     }
   ],
   highlights: [
-    "Implemented SqlServerCdcSource to translate RDBMS transaction logs into Iceberg via Nessie",
-    "Designed an async transaction listener for resilient SeaTunnel (Zeta) job dispatching",
-    "Developed a metadata discovery engine using Java JDBC to crawl heterogeneous schemas",
-    "Engineered a thread-safe multi-tenant isolation model with secure secret management",
+    "Engineered a resilient SQL Server CDC source to facilitate near-instantaneous data synchronization with Iceberg",
+    "Designed a high-throughput metadata discovery engine to automate the cataloging of heterogeneous RDBMS schemas",
+    "Architected an event-driven control plane using Spring transaction listeners for robust, non-blocking job dispatching",
+    "Implemented a zero-leak security model to manage multi-tenant database credentials with cryptographic integrity",
   ],
   technologies: [
     "SeaTunnel (Zeta)",
@@ -127,6 +127,7 @@ export const featuredProject = {
     "SQL Server CDC",
     "PostgreSQL / MySQL",
     "WebSockets (STOMP)",
+    "Java JDBC",
     "Docker",
   ],
 }
