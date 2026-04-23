@@ -10,8 +10,10 @@ import { cn } from "@/lib/utils"
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -26,6 +28,8 @@ export function Header() {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  if (!mounted) return null
 
   return (
     <header

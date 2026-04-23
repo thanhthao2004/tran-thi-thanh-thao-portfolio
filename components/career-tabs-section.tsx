@@ -231,6 +231,4 @@ export function CareerTabsSection() {
           </div>
         )}
       </div>
-    </section>
-  )
-}
+    </sectio

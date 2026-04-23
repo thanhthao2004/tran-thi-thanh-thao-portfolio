@@ -2,10 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from '@vercel/analytics/next'
+import { cn } from "@/lib/utils"
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
   title: 'Tran Thi Thanh Thao | Data Engineer & Business Analyst',
@@ -13,20 +14,6 @@ export const metadata: Metadata = {
   keywords: ['Data Engineer', 'Business Analyst', 'Data Analyst', 'Apache Spark', 'Data Lakehouse', 'ETL', 'Python'],
   authors: [{ name: 'Tran Thi Thanh Thao' }],
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
     apple: '/apple-icon.png',
   },
 }
@@ -43,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className={cn("scroll-smooth", geist.variable, geistMono.variable)} suppressHydrationWarning>
       <body className="font-sans antialiased min-h-screen bg-background text-foreground">
         <ThemeProvider
           attribute="class"

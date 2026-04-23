@@ -336,13 +336,4 @@ export function FeaturedProject() {
             <div className="flex items-start gap-3 p-5 bg-primary/10 border border-primary/30 rounded-xl">
               <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-medium text-foreground mb-1">Platform Impact</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{featuredProject.impact}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+                <p className="text-sm font-med

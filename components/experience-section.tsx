@@ -158,7 +158,4 @@ export function ExperienceSection() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
-  )
-}
+      </di

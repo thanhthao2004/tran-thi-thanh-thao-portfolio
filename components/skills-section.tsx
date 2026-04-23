@@ -143,6 +143,4 @@ export function SkillsSection() {
           </div>
         )}
       </div>
-    </section>
-  )
-}
+    </sectio

@@ -82,6 +82,4 @@ export function CertificationsSection() {
           ))}
         </div>
       </div>
-    </section>
-  )
-}
+    </sectio
