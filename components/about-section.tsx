@@ -154,8 +154,8 @@ export function AboutSection() {
               style={{ transitionDelay: isVisible ? "600ms" : "0ms" }}
             >
               <p className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">Open to opportunities</span> — looking for roles in data engineering, analytics and business analysis. Available from{" "}
-                <span className="text-primary font-medium">Aug 2026</span>.
+                <span className="font-semibold text-foreground">Open to opportunities</span> — looking for roles in business analysis, analytics and data engineering. Available from{" "}
+                <span className="text-primary font-medium">8 June 2026</span>.
               </p>
             </div>
           </div>
