@@ -45,7 +45,7 @@ export function ContactSection() {
             {"Let's Work Together"}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            {"I'm always interested in discussing new opportunities, data engineering challenges, or potential collaborations. Feel free to reach out!"}
+            {"I'm always interested in discussing new opportunities, data engineering challenges or potential collaborations. Feel free to reach out!"}
           </p>
 
           {/* CTA Button */}
