@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useEffect, useRef, useState } from "react"
-import { ArrowUpRight, CheckCircle2, Github, Clock, Database, LineChart, Briefcase } from "lucide-react"
+import { ArrowUpRight, CheckCircle2, Github, Clock, Database, LineChart, Briefcase, FileText } from "lucide-react"
 import { projects, careerRoles, type CareerRole } from "@/lib/portfolio-data"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
@@ -161,7 +161,11 @@ export function CareerTabsSection() {
                         )}
                       </div>
                       <div className="flex items-center gap-1.5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0">
-                        <Github className="h-4 w-4" />
+                        {project.githubUrl.includes("docs.google.com") ? (
+                          <FileText className="h-4 w-4" />
+                        ) : (
+                          <Github className="h-4 w-4" />
+                        )}
                         <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </div>
                     </div>

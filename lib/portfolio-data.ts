@@ -345,6 +345,42 @@ export const projects = [
       "API gateway pattern for inter-service communication",
     ],
   },
+  {
+    id: 10,
+    title: "Digital Banking Platform & Customer Journey Analysis",
+    description:
+      "Mapped customer journeys and banking operations to elicit business and functional requirements for a digital banking platform.",
+    category: "Business Analysis",
+    roles: ["Business Analyst"] as CareerRole[],
+    role: "Business Analyst",
+    year: "2024",
+    status: "completed" as const,
+    githubUrl: "https://docs.google.com/document/d/1Uy1O2WId1GGjFO80UOFEXgCWCv_9ReBc/edit",
+    technologies: ["User Stories", "UAT", "Process Modeling", "Requirements Elicitation"],
+    achievements: [
+      "Mapped customer journeys and banking operations",
+      "Translated complex needs into 20+ structured user stories and acceptance criteria",
+      "Developed process models and defined UAT scenarios for strict business compliance",
+    ],
+  },
+  {
+    id: 11,
+    title: "Event Management & Registration System",
+    description:
+      "Directed the lifecycle of a web-based event management platform (simulated 500M VND budget) utilizing PMBOK frameworks.",
+    category: "Project Management",
+    roles: ["Business Analyst"] as CareerRole[],
+    role: "Project Manager",
+    year: "2026",
+    status: "completed" as const,
+    githubUrl: "https://docs.google.com/document/d/1ez5zTwiSnkpiFrei_5iUrEVZMxRVCx3e/edit",
+    technologies: ["PMBOK", "WBS", "Jira", "SRS", "Stakeholder Management"],
+    achievements: [
+      "Directed project lifecycle with a simulated 500M VND budget using PMBOK frameworks",
+      "Elicited business requirements to author comprehensive SRS and map complex QR check-in workflows",
+      "Mitigated critical project risks via strict Change Request protocols and tracked sprint progress in Jira",
+    ],
+  },
 ]
 
 export const skillCategories = [
