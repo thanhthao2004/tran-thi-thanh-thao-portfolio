@@ -142,7 +142,7 @@ export function CareerTabsSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
-                      "group flex flex-col bg-card border border-border rounded-xl p-5 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-400",
+                      "group flex flex-col bg-card border border-border rounded-xl p-5 hover:border-primary/50 md:hover:shadow-xl md:hover:-translate-y-1 transition-all duration-400",
                       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                     )}
                     style={{ transitionDelay: isVisible ? `${index * 80}ms` : "0ms" }}
@@ -166,7 +166,7 @@ export function CareerTabsSection() {
                         ) : (
                           <Github className="h-4 w-4" />
                         )}
-                        <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        <ArrowUpRight className="h-4 w-4 md:group-hover:translate-x-0.5 md:group-hover:-translate-y-0.5 transition-transform" />
                       </div>
                     </div>
 

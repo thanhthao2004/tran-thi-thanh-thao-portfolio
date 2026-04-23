@@ -97,7 +97,7 @@ export function Hero() {
             onClick={handleScrollToWork}
             className="group"
           >
-            <Briefcase className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+            <Briefcase className="mr-2 h-5 w-5 md:group-hover:scale-110 transition-transform" />
             View My Work
           </Button>
           <Button
