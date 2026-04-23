@@ -40,7 +40,7 @@ export function Header() {
           : "bg-transparent"
       )}
     >
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <nav className="section-container px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo / Name */}
           <button

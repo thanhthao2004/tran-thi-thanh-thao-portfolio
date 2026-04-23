@@ -83,12 +83,12 @@ export function FeaturedProject() {
   }, [])
 
   return (
-    <section id="featured" ref={sectionRef} className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section id="featured" ref={sectionRef} className="section-shell">
+      <div className="section-container">
         {/* Section Header */}
         <div
           className={cn(
-            "text-center mb-16 transition-all duration-700",
+            "section-header transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
@@ -161,7 +161,7 @@ export function FeaturedProject() {
             </div>
 
             {/* Flow: Sources → Ingestion → Zones → Consumers */}
-            <div className="grid lg:grid-cols-[1fr_auto_1.5fr_auto_1fr] gap-6 lg:gap-4 items-stretch">
+            <div className="grid xl:grid-cols-[1fr_auto_1.5fr_auto_1fr] gap-6 xl:gap-4 items-stretch">
               {/* Column 1: Sources */}
               <div className="space-y-3">
                 <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Sources</p>
@@ -179,13 +179,13 @@ export function FeaturedProject() {
               </div>
 
               {/* Arrow 1 */}
-              <div className="flex items-center justify-center py-2 lg:py-0">
-                <ArrowRight className="h-5 w-5 text-primary/60 rotate-90 lg:rotate-0" />
+              <div className="flex items-center justify-center py-2 xl:py-0">
+                <ArrowRight className="h-5 w-5 text-primary/60 rotate-90 xl:rotate-0" />
               </div>
 
               {/* Column 2: Medallion Zones */}
               <div className="space-y-3">
-                <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
                   Integrator Architecture
                 </p>
                 <div className="space-y-2">
@@ -205,7 +205,7 @@ export function FeaturedProject() {
                           <div className="flex items-center gap-2">
                             <span className={cn("h-2 w-2 rounded-full", (zoneColors[zone.name] || defaultColor).dot)} />
                             <span className={cn("font-semibold text-sm", (zoneColors[zone.name] || defaultColor).text)}>{zone.name}</span>
-                            <span className="text-xs text-muted-foreground">· {zone.purpose}</span>
+                            <span className="text-sm text-muted-foreground">· {zone.purpose}</span>
                           </div>
                           <div className="flex items-center gap-1">
                             {zone.name === "Bronze" ? (
@@ -213,12 +213,12 @@ export function FeaturedProject() {
                             ) : (
                               <Layers className="h-3 w-3 text-primary" />
                             )}
-                            <span className="text-[10px] text-muted-foreground uppercase tracking-wide">
+                            <span className="text-xs text-muted-foreground uppercase tracking-wide">
                               {zone.engine}
                             </span>
                           </div>
                         </div>
-                        <p className="text-xs text-muted-foreground leading-relaxed">{zone.description}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{zone.description}</p>
                       </div>
                     )
                   })}
@@ -226,8 +226,8 @@ export function FeaturedProject() {
               </div>
 
               {/* Arrow 2 */}
-              <div className="flex items-center justify-center py-2 lg:py-0">
-                <ArrowRight className="h-5 w-5 text-primary/60 rotate-90 lg:rotate-0" />
+              <div className="flex items-center justify-center py-2 xl:py-0">
+                <ArrowRight className="h-5 w-5 text-primary/60 rotate-90 xl:rotate-0" />
               </div>
 
               {/* Column 3: Consumers */}
@@ -336,4 +336,13 @@ export function FeaturedProject() {
             <div className="flex items-start gap-3 p-5 bg-primary/10 border border-primary/30 rounded-xl">
               <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-med
+                <p className="text-sm font-medium text-foreground mb-1">Platform Impact</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{featuredProject.impact}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

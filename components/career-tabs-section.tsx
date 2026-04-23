@@ -40,21 +40,21 @@ export function CareerTabsSection() {
     <section
       id="career"
       ref={sectionRef}
-      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30"
+      className="section-shell bg-secondary/30"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="section-container">
         {/* Section Header */}
         <div
           className={cn(
-            "text-center mb-12 transition-all duration-700",
+            "section-header mb-12 transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
           <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">3 Career Paths</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="section-title">
             Projects by Role
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-description">
             I pursue three interconnected career paths. Select a role to explore projects and skills tailored to that direction.
           </p>
         </div>
@@ -62,7 +62,7 @@ export function CareerTabsSection() {
         {/* Role Tabs */}
         <div
           className={cn(
-            "flex flex-col sm:flex-row gap-3 mb-10 transition-all duration-700 delay-100",
+            "flex flex-wrap gap-3 mb-10 transition-all duration-700 delay-100",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
@@ -73,7 +73,7 @@ export function CareerTabsSection() {
                 key={role.id}
                 onClick={() => setActiveRole(role.id as CareerRole)}
                 className={cn(
-                  "flex-1 flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl font-semibold text-sm border-2 transition-all duration-300",
+                  "flex-1 min-w-[220px] md:min-w-0 flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl font-semibold text-sm border-2 transition-all duration-300",
                   activeRole === role.id
                     ? cn(role.bgColor, role.borderColor, role.color)
                     : "bg-card border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
@@ -231,4 +231,6 @@ export function CareerTabsSection() {
           </div>
         )}
       </div>
-    </sectio
+    </section>
+  )
+}

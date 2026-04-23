@@ -31,21 +31,21 @@ export function EducationSection() {
     <section
       id="education"
       ref={sectionRef}
-      className="py-24 px-4 sm:px-6 lg:px-8"
+      className="section-shell"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="section-container">
         {/* Section Header */}
         <div
           className={cn(
-            "text-center mb-16 transition-all duration-700",
+            "section-header transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
           <p className="text-primary font-medium mb-2">Academic Background</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="section-title">
             Education
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-description">
             Formal education in Information Systems with a focus on data, analytics and enterprise architecture.
           </p>
         </div>

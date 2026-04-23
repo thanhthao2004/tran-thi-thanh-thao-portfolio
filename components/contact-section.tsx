@@ -31,9 +31,9 @@ export function ContactSection() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30"
+      className="section-shell bg-secondary/30"
     >
-      <div className="mx-auto max-w-4xl">
+      <div className="section-container-narrow">
         <div
           className={cn(
             "text-center transition-all duration-700",
@@ -41,7 +41,7 @@ export function ContactSection() {
           )}
         >
           <p className="text-primary font-medium mb-2">Get in Touch</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+          <h2 className="section-title mb-6">
             {"Let's Work Together"}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
@@ -87,4 +87,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </sectio
+    </section>
+  )
+}

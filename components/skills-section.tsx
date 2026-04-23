@@ -50,35 +50,31 @@ export function SkillsSection() {
     return () => observer.disconnect()
   }, [])
 
-  const topCategories = skillCategories.slice(0, 3)
-  const bottomCategory = skillCategories[3]
-
   return (
     <section
       id="skills"
       ref={sectionRef}
-      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
+      className="section-shell"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="section-container">
         {/* Section Header */}
         <div
           className={cn(
-            "text-center mb-16 transition-all duration-700",
+            "section-header transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
           <p className="text-primary font-medium mb-2">Expertise</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="section-title">
             Skills & Technologies
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-description">
             A comprehensive toolkit across data engineering, analytics, business analysis and modern development platforms.
           </p>
         </div>
 
-        {/* Top row: 3 role-specific categories */}
-        <div className="grid md:grid-cols-3 gap-6 mb-6">
-          {topCategories.map((category, index) => {
+        <div className="grid md:grid-cols-2 gap-6">
+          {skillCategories.map((category, index) => {
             const config = categoryConfig[category.title] ?? { icon: Code2, color: "text-primary", bg: "bg-primary/10 border-primary/30" }
             const Icon = config.icon
             return (
@@ -102,7 +98,7 @@ export function SkillsSection() {
                     <Badge
                       key={skill}
                       variant="secondary"
-                      className="hover:bg-primary/10 hover:text-primary transition-colors cursor-default text-xs"
+                      className="hover:bg-primary/10 hover:text-primary transition-colors cursor-default text-sm"
                     >
                       {skill}
                     </Badge>
@@ -112,35 +108,7 @@ export function SkillsSection() {
             )
           })}
         </div>
-
-        {/* Bottom row: Tools & Platforms (full width) */}
-        {bottomCategory && (
-          <div
-            className={cn(
-              "p-6 bg-card border rounded-xl transition-all duration-700",
-              categoryConfig["Tools & Platforms"]?.bg ?? "border-border",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            )}
-            style={{ transitionDelay: isVisible ? "300ms" : "0ms" }}
-          >
-            <div className="flex items-center gap-3 mb-5">
-              <div className="p-2 bg-background/50 rounded-lg">
-                <Wrench className="h-5 w-5 text-amber-400" />
-              </div>
-              <h3 className="font-semibold text-amber-400">{bottomCategory.title}</h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {bottomCategory.skills.map((skill) => (
-                <Badge
-                  key={skill}
-                  variant="secondary"
-                  className="hover:bg-primary/10 hover:text-primary transition-colors cursor-default text-sm"
-                >
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
-    </sectio
+    </section>
+  )
+}
