@@ -15,7 +15,7 @@ export const about = {
     {
       icon: "graduation",
       title: "Final-year @ IUH",
-      text: "Information Systems student, GPA 8.4, building a multi-tenant data lakehouse as my thesis project.",
+      text: "Information Systems student, GPA 8.4 (latest semester), building a multi-tenant data lakehouse as my thesis project.",
     },
     {
       icon: "code",
@@ -87,7 +87,7 @@ export const featuredProject = {
       name: "Orchestration Plane",
       purpose: "Metadata & Lifecycle Management",
       engine: "Spring Boot",
-      description: "Centralized orchestrator managing JDBC metadata discovery, asynchronous job scheduling, and live execution monitoring.",
+      description: "Centralized orchestrator managing JDBC metadata discovery, asynchronous job scheduling and live execution monitoring.",
     },
     {
       name: "Data Ingestion Engine",
@@ -105,7 +105,7 @@ export const featuredProject = {
     {
       title: "Self-Service Metadata Discovery",
       description:
-        "Automated JDBC-based crawler that introspects MySQL, PostgreSQL, and SQL Server schemas to build a dynamic inventory of business entities for rapid integration.",
+        "Automated JDBC-based crawler that introspects MySQL, PostgreSQL and SQL Server schemas to build a dynamic inventory of business entities for rapid integration.",
     },
     {
       title: "Enterprise-Grade Tenancy",
