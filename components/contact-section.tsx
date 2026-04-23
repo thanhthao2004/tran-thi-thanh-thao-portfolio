@@ -31,7 +31,7 @@ export function ContactSection() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30"
     >
       <div className="mx-auto max-w-4xl">
         <div

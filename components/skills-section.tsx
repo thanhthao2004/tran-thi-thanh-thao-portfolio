@@ -57,7 +57,7 @@ export function SkillsSection() {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-24 px-4 sm:px-6 lg:px-8"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}

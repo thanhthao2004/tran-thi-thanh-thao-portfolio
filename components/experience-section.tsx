@@ -37,7 +37,7 @@ export function ExperienceSection() {
     <section
       id="experience"
       ref={sectionRef}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30"
     >
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
@@ -96,7 +96,7 @@ export function ExperienceSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}

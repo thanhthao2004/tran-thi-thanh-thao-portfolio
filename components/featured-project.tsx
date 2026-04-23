@@ -40,6 +40,25 @@ const zoneColors: Record<string, { bg: string; border: string; text: string; dot
     text: "text-yellow-400",
     dot: "bg-yellow-500",
   },
+  "Orchestration Plane": {
+    bg: "bg-violet-500/10",
+    border: "border-violet-500/40",
+    text: "text-violet-400",
+    dot: "bg-violet-500",
+  },
+  "Data Ingestion Engine": {
+    bg: "bg-blue-500/10",
+    border: "border-blue-500/40",
+    text: "text-blue-400",
+    dot: "bg-blue-500",
+  },
+}
+
+const defaultColor = {
+  bg: "bg-muted/10",
+  border: "border-muted/40",
+  text: "text-muted-foreground",
+  dot: "bg-muted",
 }
 
 export function FeaturedProject() {
@@ -64,7 +83,7 @@ export function FeaturedProject() {
   }, [])
 
   return (
-    <section id="featured" ref={sectionRef} className="py-24 px-4 sm:px-6 lg:px-8">
+    <section id="featured" ref={sectionRef} className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <div
@@ -102,7 +121,7 @@ export function FeaturedProject() {
         {/* Role & Description */}
         <div
           className={cn(
-            "max-w-4xl mx-auto mb-12 transition-all duration-700 delay-100",
+            "max-w-4xl mx-auto mb-10 sm:mb-16 transition-all duration-700 delay-100",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
@@ -142,7 +161,7 @@ export function FeaturedProject() {
             </div>
 
             {/* Flow: Sources → Ingestion → Zones → Consumers */}
-            <div className="grid lg:grid-cols-[1fr_auto_1.5fr_auto_1fr] gap-4 items-stretch">
+            <div className="grid lg:grid-cols-[1fr_auto_1.5fr_auto_1fr] gap-6 lg:gap-4 items-stretch">
               {/* Column 1: Sources */}
               <div className="space-y-3">
                 <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Sources</p>
@@ -167,26 +186,25 @@ export function FeaturedProject() {
               {/* Column 2: Medallion Zones */}
               <div className="space-y-3">
                 <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                  Iceberg Medallion
+                  Integrator Architecture
                 </p>
                 <div className="space-y-2">
                   {featuredProject.architectureZones.map((zone, i) => {
-                    const c = zoneColors[zone.name]
                     return (
                       <div
                         key={zone.name}
                         className={cn(
                           "p-3 rounded-lg border transition-all duration-500",
-                          c.bg,
-                          c.border,
+                          (zoneColors[zone.name] || defaultColor).bg,
+                          (zoneColors[zone.name] || defaultColor).border,
                           isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4",
                         )}
                         style={{ transitionDelay: `${300 + i * 100}ms` }}
                       >
                         <div className="flex items-center justify-between mb-1">
                           <div className="flex items-center gap-2">
-                            <span className={cn("h-2 w-2 rounded-full", c.dot)} />
-                            <span className={cn("font-semibold text-sm", c.text)}>{zone.name}</span>
+                            <span className={cn("h-2 w-2 rounded-full", (zoneColors[zone.name] || defaultColor).dot)} />
+                            <span className={cn("font-semibold text-sm", (zoneColors[zone.name] || defaultColor).text)}>{zone.name}</span>
                             <span className="text-xs text-muted-foreground">· {zone.purpose}</span>
                           </div>
                           <div className="flex items-center gap-1">
@@ -233,8 +251,8 @@ export function FeaturedProject() {
             </div>
 
             {/* Control Plane bar */}
-            <div className="mt-6 pt-6 border-t border-border">
-              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground flex-wrap">
+            <div className="mt-8 pt-6 border-t border-border">
+              <div className="flex items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground flex-wrap">
                 <Shield className="h-3.5 w-3.5 text-primary" />
                 <span className="font-medium text-foreground">Control Plane</span>
                 <span>·</span>

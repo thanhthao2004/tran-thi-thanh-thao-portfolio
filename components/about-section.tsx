@@ -38,7 +38,7 @@ export function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 scroll-mt-20"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 scroll-mt-20"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
