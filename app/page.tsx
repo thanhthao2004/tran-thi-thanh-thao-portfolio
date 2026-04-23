@@ -9,7 +9,7 @@ import { EducationSection } from "@/components/education-section"
 import { CertificationsSection } from "@/components/certifications-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
-
+// page
 export default function Home() {
   return (
     <>
