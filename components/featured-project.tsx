@@ -228,10 +228,6 @@ export function FeaturedProject() {
                     <Cloud className="h-4 w-4 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground truncate">MinIO Console</span>
                   </div>
-                  <div className="flex items-center gap-2 p-3 bg-primary/10 border border-primary/30 rounded-lg">
-                    <Radio className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-sm text-foreground truncate">WebSocket Live</span>
-                  </div>
                 </div>
               </div>
             </div>
