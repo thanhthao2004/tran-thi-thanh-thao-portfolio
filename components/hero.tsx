@@ -81,7 +81,7 @@ export function Hero() {
             <span className="text-sm text-foreground">{education.university}</span>
           </div>
           <Badge variant="secondary" className="text-sm">
-            {education.degree} | GPA: {education.gpa}
+            {education.degree}
           </Badge>
         </div>
 
