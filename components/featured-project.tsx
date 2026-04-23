@@ -156,10 +156,6 @@ export function FeaturedProject() {
                       <span className="text-sm text-foreground truncate">{src}</span>
                     </div>
                   ))}
-                  {/* <div className="flex items-center gap-2 p-3 bg-secondary rounded-lg border border-border">
-                    <FileInput className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-sm text-foreground truncate">File Uploads</span>
-                  </div> */}
                 </div>
               </div>
 
