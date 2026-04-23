@@ -113,7 +113,7 @@ export const featuredProject = {
     }
   ],
   highlights: [
-    "COLABORATIVE WITH TEAM (SCOPE: 2 MEMBERS:)",
+    "COLABORATIVE WITH TEAM (SCOPE: 2 MEMBERS)",
     "Engineered a resilient SQL Server CDC source to facilitate near-instantaneous data synchronization with Iceberg",
     "Designed a high-throughput metadata discovery engine to automate the cataloging of heterogeneous RDBMS schemas",
     "Architected an event-driven control plane using Spring transaction listeners for robust, non-blocking job dispatching",
@@ -140,7 +140,7 @@ export const projects = [
     id: 1,
     title: "Customer Analytics Lakehouse Pipeline",
     description:
-      "End-to-end lakehouse pipeline for customer analytics — ingesting, transforming and surfacing insights across the full data lifecycle. Currently in active development.",
+      "Lakehouse pipeline for customer analytics — ingesting, transforming and surfacing insights across the full data lifecycle. Currently in active development.",
     category: "Data Engineering",
     roles: ["Data Engineer", "Data Analyst"] as CareerRole[],
     role: "Data Engineer / Data Analyst",
@@ -197,7 +197,7 @@ export const projects = [
     id: 4,
     title: "Customer Churn Prediction & Retention Analysis",
     description:
-      "EDA on 10K+ customer records using SQL and Pandas to identify behavioral patterns. Developed ML models for churn prediction, reaching 86% accuracy with XGBoost.",
+      "EDA on 10K+ customer records using SQL and Pandas to identify behavioral patterns. Developed ML models for churn prediction, reaching 86% accuracy with XGBoost and visualized on Power BI.",
     category: "Machine Learning",
     roles: ["Data Analyst"] as CareerRole[],
     role: "Data Analyst",
@@ -356,7 +356,7 @@ export const skillCategories = [
       "PySpark",
       "Docker & Kubernetes",
       "Apache Kafka",
-      "MinIO / S3",
+      "MinIO",
       "ETL / ELT Pipelines",
       "Medallion Architecture",
       "Spring Boot",
@@ -401,7 +401,7 @@ export const skillCategories = [
       "PostgreSQL",
       "MySQL / SQL Server",
       "MongoDB",
-      "AWS (S3, RDS)",
+      "AWS (S3, RDS) - learn from course",
       "Azure SQL",
       "Jupyter Notebook",
       "Apache Superset",
@@ -503,7 +503,7 @@ export const careerRoles = [
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/30",
     summary: "I design and build scalable data infrastructure — from CDC ingestion pipelines to multi-tenant lakehouse platforms. I work across the full stack: orchestration, transformation engines, storage formats and real-time streaming.",
-    keySkills: ["Apache Spark", "Apache Iceberg", "SeaTunnel CDC", "PySpark", "Trino", "Docker / Kubernetes", "ETL Pipelines", "MinIO / S3"],
+    keySkills: ["Apache Spark", "Apache Iceberg", "SeaTunnel CDC", "PySpark", "Trino", "Docker / Kubernetes", "ETL Pipelines", "MinIO"],
   },
   {
     id: "Data Analyst",
