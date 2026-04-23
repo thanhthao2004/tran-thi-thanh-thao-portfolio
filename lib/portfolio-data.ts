@@ -25,7 +25,7 @@ export const about = {
     {
       icon: "people",
       title: "Mentor & community builder",
-      text: "Python mentor at IUH AI Club; data analytics instructor at MindX — 8+ cohort members, 90% project completion lift.",
+      text: "Used to teach as Python mentor role at IUH AI Club; data analytics instructor at MindX — 8+ cohort members, 90% project completion lift.",
     },
   ],
   highlights: [
@@ -65,17 +65,17 @@ export const experience = {
   type: "Part-time",
   duration: "Sep 2025 - Present",
   responsibilities: [
-    "Facilitated intensive training sessions on core data analytics stacks (SQL, Python, Excel, Power BI) for cohorts of 8+ learners",
+    "Facilitated training sessions on core data analytics stacks (SQL, Excel, Power BI) for cohorts of 8+ learners",
     "Engineered business intelligence projects simulating real-world client scenarios, guiding students through data extraction to visualization",
     "Mentored individuals on analytical problem-solving, resulting in high engagement and a 90% improvement in cohort project completion rates",
   ],
 }
 
 export const featuredProject = {
-  title: "Lakehouse Integrator: Event-Driven CDC Orchestration Plane",
+  title: "Lakehouse Integrator: Event-Driven CDC Orchestration Plane (scope: 2 members)",
   subtitle: "Engineering Thesis | Real-Time Data Infrastructure",
   description:
-    "A sophisticated, multi-tenant orchestration layer engineered to automate Change Data Capture (CDC) from heterogeneous RDBMS sources into an Apache Iceberg lakehouse. The platform serves as a high-performance control plane, transforming database transaction logs into actionable analytical datasets via SeaTunnel (Zeta) and the Nessie catalog.",
+    "Multi-tenant orchestration layer engineered to automate Change Data Capture (CDC) from heterogeneous RDBMS sources into an Apache Iceberg lakehouse. The platform serves as a high-performance control plane, transforming database transaction logs into actionable analytical datasets via SeaTunnel (Zeta) and the Nessie catalog.",
   role: "Data Architect & Lead Platform Engineer",
   duration: "2025 — Present",
   impact: "Streamlines real-time data ingestion for multi-tenant environments with automated schema discovery and resilient job orchestration.",
@@ -138,7 +138,7 @@ export type CareerRole = "Data Engineer" | "Data Analyst" | "Business Analyst"
 export const projects = [
   {
     id: 1,
-    title: "Customer Analytics Lakehouse Pipeline",
+    title: "Customer Analytics Lakehouse Pipeline (self research)",
     description:
       "Lakehouse pipeline for customer analytics — ingesting, transforming and surfacing insights across the full data lifecycle. Currently in active development.",
     category: "Data Engineering",
@@ -149,7 +149,7 @@ export const projects = [
     githubUrl: "https://github.com/thanhthao2004/Customer-Analytics-Lakehouse-Pipeline",
     technologies: ["Python", "Apache Spark", "PostgreSQL", "MinIO", "Docker"],
     achievements: [
-      "End-to-end lakehouse architecture for customer data",
+      "Lakehouse architecture for customer data",
       "Automated ingestion and transformation layers",
       "BI-ready data model for analytics consumers",
       "Active development — implementation in progress",
@@ -157,7 +157,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Automated Data Warehouse & Analytics (VnExpress)",
+    title: "Automated Data Warehouse & Analytics (VnExpress) (scope: 4 members)",
     description:
       "Engineered an automated ETL pipeline using Docker, Selenium and PySpark to ingest and process 1,000+ daily search records into PostgreSQL with Power BI dashboards.",
     category: "Data Engineering",
@@ -176,7 +176,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Agentic AI — RAG System with Multiple Agent Strategies",
+    title: "Agentic AI — RAG System with Multiple Agent Strategies (self research)",
     description:
       "Implemented three Agentic AI architectures: Single-Agent RAG, Corrective Agent RAG and Adaptive Agent RAG — comparing retrieval accuracy and response quality across strategies.",
     category: "Data Engineering",
@@ -195,7 +195,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Customer Churn Prediction & Retention Analysis",
+    title: "Customer Churn Prediction & Retention Analysis (scope: 2 members)",
     description:
       "EDA on 10K+ customer records using SQL and Pandas to identify behavioral patterns. Developed ML models for churn prediction, reaching 86% accuracy with XGBoost and visualized on Power BI.",
     category: "Machine Learning",
@@ -214,7 +214,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Vietnam University Admission Score Prediction",
+    title: "Vietnam University Admission Score Prediction (scope: 2 members)",
     description:
       "Applied regression models on crawled admission data to forecast university admission trends and support data-driven decision-making.",
     category: "Data Analysis & Research",
@@ -233,7 +233,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Data Analytics Framework for Web3 Campaign Strategies",
+    title: "Data Analytics Framework for Web3 Campaign Strategies (self research)",
     description:
       "Analytical framework for optimizing Web3 marketing campaigns — integrating on-chain data, user behavior metrics and campaign analytics into a unified dashboard.",
     category: "Business Analytics",
@@ -252,7 +252,7 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Middle School Equipment Management System",
+    title: "Middle School Equipment Management System (scope: 4 members)",
     description:
       "Full-stack web application for managing school equipment inventory, purchase orders and maintenance records — designed for real-world institutional use.",
     category: "Business Analysis & Systems",
@@ -271,7 +271,7 @@ export const projects = [
   },
   {
     id: 8,
-    title: "AES-Encrypted Student Management System",
+    title: "AES-Encrypted Student Management System (scope: 2 members)",
     description:
       "PHP-based student management system with AES encryption to protect sensitive student data — demonstrating security-aware application design and data privacy best practices.",
     category: "Security & Systems",
@@ -290,7 +290,7 @@ export const projects = [
   },
   {
     id: 9,
-    title: "EProject Phase 1 — Microservices & CI/CD",
+    title: "EProject Phase 1 — Microservices & CI/CD (self research)",
     description:
       "Microservices-based web project with a fully automated CI/CD pipeline using GitHub Actions — showcasing DevOps practices, containerization and service orchestration.",
     category: "DevOps & Systems",
@@ -309,7 +309,7 @@ export const projects = [
   },
   {
     id: 10,
-    title: "Digital Banking Platform & Customer Journey Analysis",
+    title: "Digital Banking Platform & Customer Journey Analysis (scope: 4 members)",
     description:
       "Mapped customer journeys and banking operations to elicit business and functional requirements for a digital banking platform.",
     category: "Business Analysis",
@@ -327,7 +327,7 @@ export const projects = [
   },
   {
     id: 11,
-    title: "Event Management & Registration System",
+    title: "Event Management & Registration System (scope: 6 members)",
     description:
       "Directed the lifecycle of a web-based event management platform (simulated 500M VND budget) utilizing PMBOK frameworks.",
     category: "Project Management",
@@ -338,7 +338,7 @@ export const projects = [
     githubUrl: "https://docs.google.com/document/d/1ez5zTwiSnkpiFrei_5iUrEVZMxRVCx3e/edit",
     technologies: ["PMBOK", "WBS", "Jira", "SRS", "Stakeholder Management"],
     achievements: [
-      "Directed project lifecycle with a simulated 500M VND budget using PMBOK frameworks",
+      "Directed project lifecycle with a simulated 500M VND budget (Academy project) using PMBOK frameworks",
       "Elicited business requirements to author comprehensive SRS and map complex QR check-in workflows",
       "Mitigated critical project risks via strict Change Request protocols and tracked sprint progress in Jira",
     ],
@@ -502,7 +502,7 @@ export const careerRoles = [
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/30",
-    summary: "I design and build scalable data infrastructure — from CDC ingestion pipelines to multi-tenant lakehouse platforms. I work across the full stack: orchestration, transformation engines, storage formats and real-time streaming.",
+    summary: "I design and build scalable data infrastructure with team member — understanding from CDC ingestion pipelines to multi-tenant lakehouse platforms.",
     keySkills: ["Apache Spark", "Apache Iceberg", "SeaTunnel CDC", "PySpark", "Trino", "Docker / Kubernetes", "ETL Pipelines", "MinIO"],
   },
   {
