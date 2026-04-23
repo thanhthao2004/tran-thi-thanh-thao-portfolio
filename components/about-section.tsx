@@ -73,7 +73,7 @@ export function AboutSection() {
                 <div className="absolute -inset-0.5 rounded-full bg-gradient-to-br from-primary/60 to-primary/10" />
                 <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-background">
                   <Image
-                    src="/image/avatar.jpeg"
+                    src="/tran-thi-thanh-thao-portfolio/image/avatar.jpeg"
                     alt="Tran Thi Thanh Thao"
                     fill
                     className="object-cover"
