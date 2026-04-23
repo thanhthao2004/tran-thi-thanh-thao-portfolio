@@ -20,7 +20,7 @@ export const about = {
     {
       icon: "code",
       title: "Data pipelines & insights",
-      text: "From CDC ingestion to BI dashboards — I own the full lifecycle: design, build, ship.",
+      text: "From CDC ingestion -> ETL -> BI dashboards",
     },
     {
       icon: "people",
@@ -30,9 +30,8 @@ export const about = {
   ],
   highlights: [
     { label: "GPA", value: "8.4/10", detail: "Latest semester" },
-    { label: "Certifications", value: "8+", detail: "Google, IBM, AWS" },
+    { label: "Certifications", value: "8+", detail: "Google, IBM, AWS, Coursera Networking Platform" },
     { label: "Learners Mentored", value: "8+", detail: "Per cohort at MindX" },
-    { label: "Model Accuracy", value: "86%", detail: "Churn prediction" },
   ],
   focus: [
     "Data Engineering & ETL",
@@ -114,6 +113,7 @@ export const featuredProject = {
     }
   ],
   highlights: [
+    "COLABORATIVE WITH TEAM (SCOPE: 2 MEMBERS:"
     "Engineered a resilient SQL Server CDC source to facilitate near-instantaneous data synchronization with Iceberg",
     "Designed a high-throughput metadata discovery engine to automate the cataloging of heterogeneous RDBMS schemas",
     "Architected an event-driven control plane using Spring transaction listeners for robust, non-blocking job dispatching",
