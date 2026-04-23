@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { navLinks, personalInfo } from "@/lib/portfolio-data"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 
 export function Header() {
@@ -42,8 +43,7 @@ export function Header() {
             onClick={() => handleNavClick("#hero")}
             className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
           >
-            {personalInfo.name.split(" ").slice(-1)[0]}
-            <span className="text-primary">.</span>
+            {personalInfo.name.split(" ").slice(-1)[0]} <span className="text-primary">portfolio</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -57,6 +57,7 @@ export function Header() {
                 {link.label}
               </button>
             ))}
+            <ThemeToggle />
             <Button
               size="sm"
               className="ml-4"
@@ -80,6 +81,9 @@ export function Header() {
               <Menu className="h-5 w-5" />
             )}
           </Button>
+          <div className="md:hidden">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile Navigation */}

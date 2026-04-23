@@ -1,12 +1,19 @@
 "use client"
 
+import * as React from "react"
 import { useEffect, useRef, useState } from "react"
-import { ArrowUpRight, CheckCircle2, Github, Clock } from "lucide-react"
+import { ArrowUpRight, CheckCircle2, Github, Clock, Database, LineChart, Briefcase } from "lucide-react"
 import { projects, careerRoles, type CareerRole } from "@/lib/portfolio-data"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 
 export function CareerTabsSection() {
+  const roleIcons = {
+    database: Database,
+    chart: LineChart,
+    briefcase: Briefcase,
+  }
+
   const [activeRole, setActiveRole] = useState<CareerRole>("Data Engineer")
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
@@ -59,21 +66,24 @@ export function CareerTabsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
-          {careerRoles.map((role) => (
-            <button
-              key={role.id}
-              onClick={() => setActiveRole(role.id as CareerRole)}
-              className={cn(
-                "flex-1 flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl font-semibold text-sm border-2 transition-all duration-300",
-                activeRole === role.id
-                  ? cn(role.bgColor, role.borderColor, role.color)
-                  : "bg-card border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
-              )}
-            >
-              <span className="text-lg">{role.emoji}</span>
-              {role.label}
-            </button>
-          ))}
+          {careerRoles.map((role) => {
+            const Icon = roleIcons[role.iconName as keyof typeof roleIcons] || Database
+            return (
+              <button
+                key={role.id}
+                onClick={() => setActiveRole(role.id as CareerRole)}
+                className={cn(
+                  "flex-1 flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl font-semibold text-sm border-2 transition-all duration-300",
+                  activeRole === role.id
+                    ? cn(role.bgColor, role.borderColor, role.color)
+                    : "bg-card border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                )}
+              >
+                <Icon className="h-5 w-5" />
+                {role.label}
+              </button>
+            )
+          })}
         </div>
 
         {activeRoleData && (
@@ -91,8 +101,9 @@ export function CareerTabsSection() {
             >
               <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                 <div className="flex-1">
-                  <h3 className={cn("text-xl font-bold mb-2", activeRoleData.color)}>
-                    {activeRoleData.emoji} {activeRoleData.label}
+                  <h3 className={cn("text-xl font-bold mb-2 flex items-center gap-2", activeRoleData.color)}>
+                    {React.createElement(roleIcons[activeRoleData.iconName as keyof typeof roleIcons] || Database, { className: "h-6 w-6" })}
+                    {activeRoleData.label}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-sm">
                     {activeRoleData.summary}

@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowDown, FileText, Briefcase, GraduationCap, MapPin } from "lucide-react"
+import { ArrowDown, FileText, Briefcase, GraduationCap, MapPin, Database, LineChart } from "lucide-react"
 import { personalInfo, education } from "@/lib/portfolio-data"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -37,7 +37,7 @@ export function Hero() {
             {/* Avatar image */}
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-2 border-background">
               <Image
-                src="image/avatar.jpeg"
+                src="/tran-thi-thanh-thao-portfolio/image/avatar.jpeg"
                 alt="Tran Thi Thanh Thao"
                 fill
                 className="object-cover"
@@ -61,11 +61,11 @@ export function Hero() {
 
         {/* Title badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-          <Badge className="text-sm bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30">⚙️ Data Engineer</Badge>
+          <Badge className="text-sm bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30 flex items-center gap-1.5"><Database className="h-3.5 w-3.5" /> Data Engineer</Badge>
           <span className="text-muted-foreground">·</span>
-          <Badge className="text-sm bg-emerald-500/20 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500/30">📊 Data Analyst</Badge>
+          <Badge className="text-sm bg-emerald-500/20 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500/30 flex items-center gap-1.5"><LineChart className="h-3.5 w-3.5" /> Data Analyst</Badge>
           <span className="text-muted-foreground">·</span>
-          <Badge className="text-sm bg-violet-500/20 text-violet-300 border-violet-500/30 hover:bg-violet-500/30">🎯 Business Analyst</Badge>
+          <Badge className="text-sm bg-violet-500/20 text-violet-300 border-violet-500/30 hover:bg-violet-500/30 flex items-center gap-1.5"><Briefcase className="h-3.5 w-3.5" /> Business Analyst</Badge>
         </div>
 
         {/* Location */}

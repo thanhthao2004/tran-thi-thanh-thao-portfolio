@@ -500,7 +500,7 @@ export const careerRoles = [
   {
     id: "Data Engineer",
     label: "Data Engineer",
-    emoji: "⚙️",
+    iconName: "database",
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/30",
@@ -510,7 +510,7 @@ export const careerRoles = [
   {
     id: "Data Analyst",
     label: "Data Analyst",
-    emoji: "📊",
+    iconName: "chart",
     color: "text-emerald-400",
     bgColor: "bg-emerald-500/10",
     borderColor: "border-emerald-500/30",
@@ -520,7 +520,7 @@ export const careerRoles = [
   {
     id: "Business Analyst",
     label: "Business Analyst",
-    emoji: "🎯",
+    iconName: "briefcase",
     color: "text-violet-400",
     bgColor: "bg-violet-500/10",
     borderColor: "border-violet-500/30",
