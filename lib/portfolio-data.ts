@@ -73,100 +73,47 @@ export const experience = {
 }
 
 export const featuredProject = {
-  title: "Lakehouse Integrator — Multi-Tenant Data Lakehouse Platform",
-  subtitle: "Thesis Project | End-to-End Data Platform",
+  title: "Multi-Tenant Lakehouse CDC Ingestion Platform",
+  subtitle: "Thesis Project | Data Architecture",
   description:
-    "A production-style, multi-tenant lakehouse platform that unifies ingestion, transformation, governance and BI under a single control plane. Built with a thesis partner — the repository is private as this is an active thesis submission. The platform ingests from heterogeneous RDBMS sources into a medallion architecture (Bronze → Silver → Gold) on Apache Iceberg, with tenant isolation enforced by identity rather than Kubernetes namespaces.",
-  role: "Data Architect & Platform Engineer",
+    "Designing a multi-tenant lakehouse architecture to enable scalable Change Data Capture (CDC) ingestion from multiple RDBMS sources. Built with a thesis partner — the repository is private as this is an active thesis submission.",
+  role: "Data Architect",
   duration: "2025 — Present",
-  impact: "Unifies ingestion, transformation and BI into one self-service platform with tenant isolation by design.",
+  impact: "Enables scalable CDC ingestion from heterogeneous RDBMS sources into a unified multi-tenant architecture.",
   privateNote: "This project is a collaborative thesis and the GitHub repository is kept private during the submission period.",
   githubUrl: "https://github.com/thanhthao2004",
   architectureZones: [
     {
-      name: "Bronze",
-      purpose: "Raw & Landed",
+      name: "Ingestion Layer",
+      purpose: "CDC & Replication",
       engine: "SeaTunnel Zeta",
-      description: "CDC streams & file uploads land here with minimal normalization.",
-    },
-    {
-      name: "Silver",
-      purpose: "Cleaned & Conformed",
-      engine: "Apache Spark",
-      description: "Validated, deduped data ready for analytics joins.",
-    },
-    {
-      name: "Gold",
-      purpose: "Curated Marts",
-      engine: "Apache Spark",
-      description: "Facts, dimensions, SCD Type 2 and aggregations.",
-    },
+      description: "Scalable Change Data Capture streams from multiple RDBMS sources.",
+    }
   ],
   capabilities: [
     {
-      title: "Tenant Isolation by Identity",
+      title: "Scalable CDC Ingestion",
       description:
-        "One user maps to exactly one tenant. Shared K8s namespaces with RBAC, workload labels and Hibernate Filters enforce tenant scoping at the data layer — no per-tenant namespaces required.",
+        "Engineered to continuously capture and ingest data changes from multiple heterogeneous RDBMS sources (MySQL, PostgreSQL, SQL Server).",
     },
     {
-      title: "Iceberg Medallion Architecture",
+      title: "Multi-Tenant Lakehouse Architecture",
       description:
-        "Canonical addressing: <zone>.<tenant_slug>.<entity>. One catalog per zone, one MinIO bucket per tenant, consistent warehouse paths across Bronze/Silver/Gold.",
-    },
-    {
-      title: "Engine-Derived Pipelines",
-      description:
-        "Compiler auto-routes: ingestion → Zeta, transform/publish → Spark. Users write manifests (not engine code) and the platform validates zone progression, merge keys and CDC options.",
-    },
-    {
-      title: "Event-Driven Execution",
-      description:
-        "Unified MinIO webhook with path routing handles file uploads AND Iceberg commit notifications. Async Spring event model returns run IDs in <100ms; WebSocket streams status back.",
-    },
-    {
-      title: "Real-Time Notifications",
-      description:
-        "STOMP over SockJS delivers 12 categories of live updates — run status, dataset commits, upload progress, quality results — over a tenant-scoped topic hierarchy secured by JWT.",
-    },
-    {
-      title: "Data Quality & Validation",
-      description:
-        "Reusable Quality Rules (NOT_NULL, RANGE, REGEX, UNIQUENESS, REFERENTIAL_INTEGRITY, FRESHNESS) composed into Profiles with FAIL / SKIP / ROUTE_TO_TABLE error handling.",
-    },
-    {
-      title: "Self-Service Integrations Plane",
-      description:
-        "Per-tenant provisioning for MinIO buckets, Trino schemas (bronze/silver/gold) and Superset connections with 4-role RBAC (Tenant Admin, Data Engineer, Analyst, BA).",
-    },
-    {
-      title: "SSO-Style Link-Outs",
-      description:
-        "Short-lived redirects to Superset (JWT login) and MinIO Console (STS credentials, ≤5 min) — no iframe embedding, fully audited.",
-    },
+        "Designed tenant isolation by identity, allowing multiple users and systems to securely ingest and land data in a shared lakehouse environment.",
+    }
   ],
   highlights: [
-    "Medallion lakehouse (Bronze/Silver/Gold) on Apache Iceberg with canonical <zone>.<tenant>.<entity> addressing",
-    "Ingestion via SeaTunnel Zeta (files + RDBMS CDC); Transform/Publish via Apache Spark with compiler-enforced engine routing",
-    "Multi-tenant isolation via RBAC, workload labels and Hibernate Filters — shared K8s namespaces, zero per-tenant overhead",
-    "Async pipeline execution (<100ms API response) with Spring events, thread-pool dispatch and WebSocket status streaming",
-    "Event-driven dataset registration on Iceberg commit via unified MinIO webhook — streaming-safe, sub-second visibility",
-    "Integrations plane with self-service MinIO / Trino / Superset provisioning and SSO-style short-lived link-outs",
-    "Data quality framework with reusable rules, profiles and FAIL / SKIP / ROUTE_TO_TABLE error routing",
+    "Designed a multi-tenant lakehouse architecture for scalable data processing",
+    "Enabled real-time Change Data Capture (CDC) from multiple RDBMS sources",
+    "Implemented secure tenant isolation at the data layer",
   ],
   technologies: [
-    "Apache Iceberg",
-    "Apache Spark",
     "SeaTunnel Zeta",
-    "Trino",
-    "Apache Superset",
-    "MinIO",
-    "Kubernetes",
-    "Spring Boot",
-    "STOMP / WebSocket",
-    "Quartz",
     "PostgreSQL",
     "MySQL",
     "SQL Server",
+    "Apache Iceberg",
+    "Spring Boot",
   ],
 }
 
