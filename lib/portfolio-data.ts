@@ -73,47 +73,61 @@ export const experience = {
 }
 
 export const featuredProject = {
-  title: "Multi-Tenant Lakehouse CDC Ingestion Platform",
-  subtitle: "Thesis Project | Data Architecture",
+  title: "Lakehouse Integrator — Event-Driven Ingestion Control Plane",
+  subtitle: "Thesis Project | Data Infrastructure",
   description:
-    "Designing a multi-tenant lakehouse architecture to enable scalable Change Data Capture (CDC) ingestion from multiple RDBMS sources. Built with a thesis partner — the repository is private as this is an active thesis submission.",
-  role: "Data Architect",
+    "An event-driven ingestion control plane designed to capture Change Data Capture (CDC) streams from relational databases (specifically SQL Server) and sink them into an Apache Iceberg table format via a Nessie catalog. It acts as an orchestration and metadata layer, routing RDBMS schema metadata into the system and launching SeaTunnel (Zeta) jobs for execution.",
+  role: "Data Architect & Platform Engineer",
   duration: "2025 — Present",
-  impact: "Enables scalable CDC ingestion from heterogeneous RDBMS sources into a unified multi-tenant architecture.",
+  impact: "Orchestrates scalable CDC ingestion from heterogeneous RDBMS sources into a multi-tenant lakehouse architecture.",
   privateNote: "This project is a collaborative thesis and the GitHub repository is kept private during the submission period.",
   githubUrl: "https://github.com/thanhthao2004",
   architectureZones: [
     {
-      name: "Ingestion Layer",
-      purpose: "CDC & Replication",
-      engine: "SeaTunnel Zeta",
-      description: "Scalable Change Data Capture streams from multiple RDBMS sources.",
+      name: "Control Plane",
+      purpose: "Orchestration & Metadata",
+      engine: "Spring Boot",
+      description: "Handles metadata discovery, async job submission, and execution state tracking.",
+    },
+    {
+      name: "Execution Engine",
+      purpose: "CDC Ingestion",
+      engine: "SeaTunnel (Zeta)",
+      description: "Dynamically compiles job manifests to ingest data from RDBMS transaction logs into Iceberg.",
     }
   ],
   capabilities: [
     {
-      title: "Scalable CDC Ingestion",
+      title: "Event-Driven Orchestration",
       description:
-        "Engineered to continuously capture and ingest data changes from multiple heterogeneous RDBMS sources (MySQL, PostgreSQL, SQL Server).",
+        "Unified PipelineSubmitter emits async events for post-commit job dispatch, tracking state transitions via WebSockets for real-time UI updates.",
     },
     {
-      title: "Multi-Tenant Lakehouse Architecture",
+      title: "Automated Metadata Discovery",
       description:
-        "Designed tenant isolation by identity, allowing multiple users and systems to securely ingest and land data in a shared lakehouse environment.",
+        "JDBC-based crawler inspects MySQL, PostgreSQL, and SQL Server schemas, persisting entity relationships for self-service ingestion mapping.",
+    },
+    {
+      title: "Secure Multi-Tenancy",
+      description:
+        "Thread-local TenantContext isolates platform operations, with explicit memory clearing of decrypted JDBC secrets post-execution.",
     }
   ],
   highlights: [
-    "Designed a multi-tenant lakehouse architecture for scalable data processing",
-    "Enabled real-time Change Data Capture (CDC) from multiple RDBMS sources",
-    "Implemented secure tenant isolation at the data layer",
+    "Implemented SqlServerCdcSource to translate RDBMS transaction logs into Iceberg via Nessie",
+    "Designed an async transaction listener for resilient SeaTunnel (Zeta) job dispatching",
+    "Developed a metadata discovery engine using Java JDBC to crawl heterogeneous schemas",
+    "Engineered a thread-safe multi-tenant isolation model with secure secret management",
   ],
   technologies: [
-    "SeaTunnel Zeta",
-    "PostgreSQL",
-    "MySQL",
-    "SQL Server",
+    "SeaTunnel (Zeta)",
     "Apache Iceberg",
+    "Project Nessie",
     "Spring Boot",
+    "SQL Server CDC",
+    "PostgreSQL / MySQL",
+    "WebSockets (STOMP)",
+    "Docker",
   ],
 }
 
