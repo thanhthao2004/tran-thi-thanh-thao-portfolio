@@ -113,7 +113,7 @@ export const featuredProject = {
     }
   ],
   highlights: [
-    "COLABORATIVE WITH TEAM (SCOPE: 2 MEMBERS:"
+    "COLABORATIVE WITH TEAM (SCOPE: 2 MEMBERS:)",
     "Engineered a resilient SQL Server CDC source to facilitate near-instantaneous data synchronization with Iceberg",
     "Designed a high-throughput metadata discovery engine to automate the cataloging of heterogeneous RDBMS schemas",
     "Architected an event-driven control plane using Spring transaction listeners for robust, non-blocking job dispatching",
