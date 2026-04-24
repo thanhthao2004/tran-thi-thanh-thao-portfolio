@@ -29,7 +29,7 @@ export const about = {
     },
   ],
   highlights: [
-    { label: "GPA", value: "8.4/10", detail: "Latest semester" },
+    { label: "GPA", value: "8.4/10 (latest semester)", detail: "Latest semester" },
     { label: "Certifications", value: "8+", detail: "Google, IBM, AWS, Coursera Networking Platform" },
     { label: "Learners Mentored", value: "8+", detail: "Per cohort at MindX" },
   ],
@@ -429,7 +429,7 @@ export const awards = [
   {
     title: "Best Presentation Award",
     project: "Data Analytics Framework for Optimizing Web3 Campaign Strategies: Integrating Contract Risk, Gas Economics and User Behavior",
-    image: "/tran-thi-thanh-thao-portfolio/image/Minhchung_GiaitrinhbayXuatsac.jpeg",
+    image: "/tran-thi-thanh-thao-portfolio/public/image/Minhchung_GiaitrinhbayXuatsac.jpeg",
     link: "https://github.com/thanhthao2004/Data-Analytics-Framework-for-Optimizing-Web3-Campaign-Strategies",
     year: "2025",
   },
@@ -527,4 +527,13 @@ export const careerRoles = [
     keySkills: ["SQL (Window Functions, CTEs)", "Python (Pandas, Scikit-learn)", "Power BI (DAX)", "EDA", "XGBoost / Random Forest", "Statistical Analysis", "Data Storytelling"],
   },
   {
-    id: "Bus
+    id: "Business Analyst",
+    label: "Business Analyst",
+    iconName: "briefcase",
+    color: "text-violet-400",
+    bgColor: "bg-violet-500/10",
+    borderColor: "border-violet-500/30",
+    summary: "I bridge the gap between business needs and technical solutions. With a background in systems analysis, requirements management and Agile, I translate stakeholder goals into system specifications and data strategies.",
+    keySkills: ["Requirements Analysis", "Systems Design & UML", "User Story Mapping", "Agile / Scrum", "Process Optimization", "Data Governance", "Stakeholder Communication"],
+  },
+]
