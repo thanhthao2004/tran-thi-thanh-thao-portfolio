@@ -63,7 +63,7 @@ export function AwardsSection() {
                 <img
                   src={award.image}
                   alt={award.title}
-                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-top w-full h-full transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-4 right-4 z-10">
                   <Badge variant="secondary" className="bg-background/80 backdrop-blur-md text-foreground shadow-sm flex gap-1.5 items-center px-3 py-1 text-xs">
@@ -72,7 +72,7 @@ export function AwardsSection() {
                   </Badge>
                 </div>
               </div>
-              
+
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <h3 className="font-bold text-xl text-foreground group-hover:text-primary transition-colors">
@@ -90,7 +90,7 @@ export function AwardsSection() {
                     </a>
                   )}
                 </div>
-                
+
                 <p className="text-sm text-muted-foreground leading-relaxed mt-auto">
                   {award.project}
                 </p>
