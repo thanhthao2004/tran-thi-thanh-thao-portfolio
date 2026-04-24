@@ -429,7 +429,7 @@ export const awards = [
   {
     title: "Best Presentation Award",
     project: "Data Analytics Framework for Optimizing Web3 Campaign Strategies: Integrating Contract Risk, Gas Economics and User Behavior",
-    image: "/tran-thi-thanh-thao-portfolio/public/image/Minhchung_GiaitrinhbayXuatsac.jpeg",
+    image: "/tran-thi-thanh-thao-portfolio/image/Minhchung_GiaitrinhbayXuatsac.jpeg",
     link: "https://github.com/thanhthao2004/Data-Analytics-Framework-for-Optimizing-Web3-Campaign-Strategies",
     year: "2025",
   },
