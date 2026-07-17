@@ -15,7 +15,7 @@ export const about = {
     {
       icon: "graduation",
       title: "Final-year @ IUH",
-      text: "Information Systems student, GPA 8.4 (latest semester), building a multi-tenant data lakehouse as my thesis project.",
+      text: "Information Systems student, GPA 3.2/4.0, building a multi-tenant data lakehouse as my thesis project.",
     },
     {
       icon: "code",
@@ -25,13 +25,13 @@ export const about = {
     {
       icon: "people",
       title: "Mentor & community builder",
-      text: "Used to teach as Python mentor role at IUH AI Club; data analytics instructor at MindX — 8+ cohort members, 90% project completion lift.",
+      text: "Used to teach as Python mentor role at IUH AI Club; data analytics instructor at MindX — 30+ learners trained, 100% project completion rate.",
     },
   ],
   highlights: [
-    { label: "GPA", value: "8.4/10 (latest semester)", detail: "Latest semester" },
+    { label: "GPA", value: "3.2/4.0", detail: "" },
     { label: "Certifications", value: "8+", detail: "Google, IBM, AWS, Coursera Networking Platform" },
-    { label: "Learners Mentored", value: "8+", detail: "Per cohort at MindX" },
+    { label: "Learners Mentored", value: "30+", detail: "At MindX" },
   ],
   focus: [
     "Data Engineering & ETL",
@@ -46,16 +46,14 @@ export const education = {
   university: "Industrial University of Ho Chi Minh City",
   universityShort: "IUH",
   degree: "Bachelor of Information Systems",
-  gpa: "8.4/10",
-  gpaNote: "Latest semester",
-  expectedGraduation: "Aug 2026",
+  gpa: "3.2/4.0",
+  gpaNote: "",
+  expectedGraduation: "June 2026",
   coursework: [
-    "Requirements Management & Analysis",
+    "Requirements Engineering",
     "Systems Analysis & Design",
-    "Data Mining",
-    "Project Management",
-    "RDBMS",
     "Enterprise Resource Planning (ERP)",
+    "Project Management",
   ],
 }
 
@@ -66,12 +64,13 @@ export const experience = [
     type: "Internship",
     duration: "June 2026 - Present",
     responsibilities: [
-      "Evaluated enterprise AI frameworks and authored comparative findings to support strategic decision-making.",
-      "Analyzed workflows and translated technical constraints into prioritized Non-Functional Requirements (NFRs).",
-      "Authored BRD, SRS, BPMN process models and functional specifications for development teams.",
-      "Conducted business analysis for migrating a healthcare tool into a scalable multi-tenant SaaS architecture.",
-      "Defined user flows, business rules, acceptance criteria and RBAC requirements for AI-assisted document generation.",
-      "Established requirement traceability matrices and coordinated UI specifications."
+      "Evaluated enterprise AI frameworks by defining functional evaluation criteria and documenting comparative findings to support leadership’s strategic decision-making.",
+      "Analyzed browser-automation workflows and translated technical constraints into prioritized Non-Functional Requirements (NFRs), helping the engineering team address enterprise integration risks.",
+      "Authored BRD, SRS, BPMN process models and functional specifications that translated business requirements into clear, actionable documentation for development teams.",
+      "Conducted business analysis for migrating a healthcare assessment tool into a scalable multi-tenant SaaS architecture, documenting current-state and future-state workflows.",
+      "Collaborated with product owners and developers to clarify business requirements and refine user stories.",
+      "Defined user flows, business rules, acceptance criteria and Role-Based Access Control (RBAC) requirements for questionnaire engines and AI-assisted document generation.",
+      "Established requirement traceability matrices and coordinated UI specifications, ensuring alignment with GDPR and healthcare EMR interoperability standards."
     ],
   },
   {
@@ -80,9 +79,9 @@ export const experience = [
     type: "Part-time",
     duration: "Sep 2025 - Present",
     responsibilities: [
-      "Facilitated training sessions on core data analytics stacks (SQL, Excel, Power BI) for cohorts of 8+ learners",
-      "Engineered business intelligence projects simulating real-world client scenarios, guiding students through data extraction to visualization",
-      "Mentored individuals on analytical problem-solving, resulting in high engagement and a 90% improvement in cohort project completion rates",
+      "Designed practical analytics curricula, training 30+ learners to solve business problems using SQL, Python and Power BI.",
+      "Developed project-based business case studies, guiding learners through requirement analysis, data modeling, dashboard development and business presentation.",
+      "Achieved a 100% project completion rate through structured feedback and progress tracking."
     ],
   }
 ]
@@ -311,7 +310,7 @@ export const projects = [
       "Microservices-based web project with a fully automated CI/CD pipeline using GitHub Actions — showcasing DevOps practices, containerization and service orchestration.",
     category: "DevOps & Systems",
     roles: ["Business Analyst"] as CareerRole[],
-    role: "Developer / DevOps",
+    role: "Developer",
     year: "2025",
     status: "completed" as const,
     githubUrl: "https://github.com/thanhthao2004/EProject-Phase-1",
@@ -428,23 +427,16 @@ export const skillCategories = [
 
 export const activities = [
   {
-    organization: "MTA VIETNAM 2026",
-    role: "Exhibitor / Booth Representative",
+    organization: "MTA Exhibition",
+    role: "Business Analyst",
     duration: "2026",
-    description: `Achievements:
-• Learned how to communicate and convince about Software Outsourcing Solutions to find customers
-• Learned how to set up a booth and stand by
-• Learned about interesting knowledge and struggles of business in real life while talking with customers
+    description: `Client Consultation: Represented the company at the MTA exhibition to introduce our Software Outsourcing Solutions. Engaged directly with industry professionals and C-level executives, learning how to connect our technical services with their real-world business needs.
 
-Challenges:
-• Quite shy when face-to-face with valuable customers who have important positions in this industry
-• Haven't understood deeply about solutions, so when I talked with walkers, I stumbled over my words 
+Customer Insights Gathering: Talked directly with walk-in customers to understand their daily operational bottlenecks. This hands-on experience gave me practical insights into customer pain points and how businesses actually operate in the industry.
 
-Key learnings and next action:
-• Try to improve communication skills and need to understand the target audience when presenting
-• All of action which need to be prepared with a plan first at home, then when I apply it, I can feel more confident.`,
-    highlights: ["Software Outsourcing", "Business Communication", "Customer Engagement"],
-    image: "/image/MTA_exhibit.jpg",
+Self-Improvement & Next Steps: Realized the importance of adapting my communication style for different audiences. Developed a personal preparation checklist for future client meetings, focusing on deep product research and audience analysis to present more confidently.`,
+    highlights: ["Software Outsourcing", "Client Consultation", "Customer Insights"],
+    image: "/image/MTA_exhibit.jpeg",
   },
   {
     organization: "AI Club - IUH",

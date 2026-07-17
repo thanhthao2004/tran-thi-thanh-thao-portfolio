@@ -7,9 +7,9 @@ import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 
 const stats = [
-  { icon: Users, value: "8+", label: "Learners Trained" },
-  { icon: TrendingUp, value: "90%", label: "Completion Rate Improvement" },
-  { icon: Code, value: "4+", label: "Tech Stacks Taught" },
+  { icon: Users, value: "30+", label: "Learners Trained" },
+  { icon: TrendingUp, value: "100%", label: "Project Completion Rate" },
+  { icon: Code, value: "3+", label: "Tech Stacks Taught" },
 ]
 
 export function ExperienceSection() {
