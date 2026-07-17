@@ -49,119 +49,70 @@ export function ExperienceSection() {
         >
           <p className="text-primary font-medium mb-2">Professional Journey</p>
           <h2 className="section-title">
-            Experience & Activities
+            Experience
           </h2>
           <p className="section-description">
-            Contributing to the data community through mentorship and active participation in tech organizations.
+            My professional background in business analysis and data analysis.
           </p>
         </div>
 
         <div
           className={cn(
-            "grid lg:grid-cols-2 gap-12 items-start transition-all duration-700",
+            "max-w-4xl mx-auto space-y-6 transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
-          {/* Left: Professional Experience */}
-          <div className="space-y-6">
-            {experience.map((exp, index) => (
-              <div key={index} className="p-6 bg-card border border-border rounded-xl">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-xl">
-                    <Briefcase className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-foreground mb-1">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
-                    <div className="flex items-center gap-2 mt-2">
-                      <Badge variant="secondary">{exp.type}</Badge>
-                      <span className="text-sm text-muted-foreground flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
-                        {exp.duration}
-                      </span>
-                    </div>
-                  </div>
+          {experience.map((exp, index) => (
+            <div key={index} className="p-6 bg-card border border-border rounded-xl">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-primary/10 rounded-xl">
+                  <Briefcase className="h-6 w-6 text-primary" />
                 </div>
-
-                <ul className="space-y-3">
-                  {exp.responsibilities.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-3 text-muted-foreground text-sm"
-                    >
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
-            {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {stats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className={cn(
-                    "flex flex-col items-center p-4 bg-card border border-border rounded-xl text-center transition-all duration-500 hover:border-primary/50",
-                    isVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-8"
-                  )}
-                  style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
-                >
-                  <div className="p-2 bg-primary/10 rounded-lg mb-2">
-                    <stat.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <p className="text-2xl font-bold text-foreground">{stat.value}</p>
-                  <p className="text-xs text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: Activities */}
-          <div className="space-y-6" id="activities">
-            {activities.map((activity, index) => (
-              <div
-                key={activity.organization}
-                className={cn(
-                  "p-6 bg-card border border-border rounded-xl transition-all duration-500 hover:border-primary/50",
-                  isVisible
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-8"
-                )}
-                style={{ transitionDelay: isVisible ? `${(index + 1) * 150}ms` : "0ms" }}
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-xl">
-                    <Lightbulb className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-foreground mb-1">{activity.role}</h3>
-                    <p className="text-muted-foreground text-sm">{activity.organization}</p>
-                    <span className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-foreground mb-1">{exp.role}</h3>
+                  <p className="text-muted-foreground">{exp.company}</p>
+                  <div className="flex items-center gap-2 mt-2">
+                    <Badge variant="secondary">{exp.type}</Badge>
+                    <span className="text-sm text-muted-foreground flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
-                      {activity.duration}
+                      {exp.duration}
                     </span>
                   </div>
                 </div>
+              </div>
 
-                <p className="text-muted-foreground text-sm mb-4 whitespace-pre-line">{activity.description}</p>
+              <ul className="space-y-3">
+                {exp.responsibilities.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 text-muted-foreground text-sm"
+                  >
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
-                {activity.image && (
-                  <div className="mb-4 rounded-lg overflow-hidden border border-border/50">
-                    <img src={activity.image} alt={activity.organization} className="w-full h-auto object-cover" />
-                  </div>
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className={cn(
+                  "flex flex-col items-center p-4 bg-card border border-border rounded-xl text-center transition-all duration-500 hover:border-primary/50",
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 )}
-
-                <div className="flex flex-wrap gap-2">
-                  {activity.highlights && activity.highlights.map((highlight, idx) => (
-                    <Badge key={idx} variant="outline" className="text-xs">
-                      {highlight}
-                    </Badge>
-                  ))}
+                style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
+              >
+                <div className="p-2 bg-primary/10 rounded-lg mb-2">
+                  <stat.icon className="h-5 w-5 text-primary" />
                 </div>
+                <p className="text-2xl font-bold text-foreground">{stat.value}</p>
+                <p className="text-xs text-muted-foreground">{stat.label}</p>
               </div>
             ))}
           </div>

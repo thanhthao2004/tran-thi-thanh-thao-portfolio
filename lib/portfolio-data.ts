@@ -527,9 +527,9 @@ export const navLinks = [
   { href: "#career", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
-  { href: "#activities", label: "Activities" },
   { href: "#education", label: "Education" },
   { href: "#awards", label: "Awards" },
+  { href: "#activities", label: "Activities" },
   { href: "#contact", label: "Contact" },
 ]
 
