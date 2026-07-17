@@ -47,7 +47,7 @@ export const education = {
   universityShort: "IUH",
   degree: "Bachelor of Information Systems",
   gpa: "3.2/4.0",
-  gpaNote: "",
+  gpaNote: "overall",
   expectedGraduation: "June 2026",
   coursework: [
     "Requirements Engineering",
@@ -92,7 +92,7 @@ export const featuredProject = {
   description:
     "Multi-tenant orchestration layer engineered to automate Change Data Capture (CDC) from heterogeneous RDBMS sources into an Apache Iceberg lakehouse. The platform serves as a high-performance control plane, transforming database transaction logs into actionable analytical datasets via SeaTunnel (Zeta) and the Nessie catalog.",
   role: "Data Architect & Lead Platform Engineer",
-  duration: "2025 — Present",
+  duration: "Dec 2025 — May 2026",
   impact: "Streamlines real-time data ingestion for multi-tenant environments with automated schema discovery and resilient job orchestration.",
   privateNote: "This project is a collaborative thesis and the GitHub repository is kept private during the submission period.",
   githubUrl: "https://github.com/thanhthao2004",
@@ -196,7 +196,7 @@ export const projects = [
       "Implemented three Agentic AI architectures: Single-Agent RAG, Corrective Agent RAG and Adaptive Agent RAG — comparing retrieval accuracy and response quality across strategies.",
     category: "Data Engineering",
     roles: ["Data Engineer"] as CareerRole[],
-    role: "AI / Data Engineer",
+    role: "AI Engineer",
     year: "2025",
     status: "completed" as const,
     githubUrl: "https://github.com/thanhthao2004/Agentic_AI",

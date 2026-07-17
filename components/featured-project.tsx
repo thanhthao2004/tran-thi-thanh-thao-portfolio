@@ -103,7 +103,7 @@ export function FeaturedProject() {
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-sm text-amber-300">
               <Lock className="h-3.5 w-3.5" />
-              <span>Private repository — active thesis submission</span>
+              <span>Private repository — thesis submission</span>
             </div>
           </div>
           <a
