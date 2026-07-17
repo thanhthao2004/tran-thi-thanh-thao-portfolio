@@ -59,17 +59,33 @@ export const education = {
   ],
 }
 
-export const experience = {
-  company: "MindX Technology Center",
-  role: "Data Analytics Mentor",
-  type: "Part-time",
-  duration: "Sep 2025 - Present",
-  responsibilities: [
-    "Facilitated training sessions on core data analytics stacks (SQL, Excel, Power BI) for cohorts of 8+ learners",
-    "Engineered business intelligence projects simulating real-world client scenarios, guiding students through data extraction to visualization",
-    "Mentored individuals on analytical problem-solving, resulting in high engagement and a 90% improvement in cohort project completion rates",
-  ],
-}
+export const experience = [
+  {
+    company: "TMA Solutions",
+    role: "Technical Business Analyst Intern",
+    type: "Internship",
+    duration: "June 2026 - Present",
+    responsibilities: [
+      "Evaluated enterprise AI frameworks and authored comparative findings to support strategic decision-making.",
+      "Analyzed workflows and translated technical constraints into prioritized Non-Functional Requirements (NFRs).",
+      "Authored BRD, SRS, BPMN process models and functional specifications for development teams.",
+      "Conducted business analysis for migrating a healthcare tool into a scalable multi-tenant SaaS architecture.",
+      "Defined user flows, business rules, acceptance criteria and RBAC requirements for AI-assisted document generation.",
+      "Established requirement traceability matrices and coordinated UI specifications."
+    ],
+  },
+  {
+    company: "MindX Technology Center",
+    role: "Data Analytics Mentor",
+    type: "Part-time",
+    duration: "Sep 2025 - Present",
+    responsibilities: [
+      "Facilitated training sessions on core data analytics stacks (SQL, Excel, Power BI) for cohorts of 8+ learners",
+      "Engineered business intelligence projects simulating real-world client scenarios, guiding students through data extraction to visualization",
+      "Mentored individuals on analytical problem-solving, resulting in high engagement and a 90% improvement in cohort project completion rates",
+    ],
+  }
+]
 
 export const featuredProject = {
   title: "Lakehouse Integrator: Event-Driven CDC Orchestration Plane (scope: 2 members)",
@@ -411,6 +427,25 @@ export const skillCategories = [
 ]
 
 export const activities = [
+  {
+    organization: "MTA VIETNAM 2026",
+    role: "Exhibitor / Booth Representative",
+    duration: "2026",
+    description: `Achievements:
+• Learned how to communicate and convince about Software Outsourcing Solutions to find customers
+• Learned how to set up a booth and stand by
+• Learned about interesting knowledge and struggles of business in real life while talking with customers
+
+Challenges:
+• Quite shy when face-to-face with valuable customers who have important positions in this industry
+• Haven't understood deeply about solutions, so when I talked with walkers, I stumbled over my words 
+
+Key learnings and next action:
+• Try to improve communication skills and need to understand the target audience when presenting
+• All of action which need to be prepared with a plan first at home, then when I apply it, I can feel more confident.`,
+    highlights: ["Software Outsourcing", "Business Communication", "Customer Engagement"],
+    image: "/image/MTA_exhibit.jpg",
+  },
   {
     organization: "AI Club - IUH",
     role: "Active Member & Python Mentor",
