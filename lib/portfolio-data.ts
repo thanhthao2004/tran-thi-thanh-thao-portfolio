@@ -428,7 +428,7 @@ export const skillCategories = [
 export const activities = [
   {
     organization: "MTA Exhibition",
-    role: "Business Analyst",
+    role: "Software Outsourcing Solutions Representative",
     duration: "2026",
     description: `Client Consultation: Represented the company at the MTA exhibition to introduce our Software Outsourcing Solutions. Engaged directly with industry professionals and C-level executives, learning how to connect our technical services with their real-world business needs.
 
@@ -436,7 +436,7 @@ Customer Insights Gathering: Talked directly with walk-in customers to understan
 
 Self-Improvement & Next Steps: Realized the importance of adapting my communication style for different audiences. Developed a personal preparation checklist for future client meetings, focusing on deep product research and audience analysis to present more confidently.`,
     highlights: ["Software Outsourcing", "Client Consultation", "Customer Insights"],
-    image: "/image/MTA_exhibit.jpeg",
+    image: "/image/MTA_exhibit.jpg",
   },
   {
     organization: "AI Club - IUH",
@@ -527,6 +527,7 @@ export const navLinks = [
   { href: "#career", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
+  { href: "#activities", label: "Activities" },
   { href: "#education", label: "Education" },
   { href: "#awards", label: "Awards" },
   { href: "#contact", label: "Contact" },

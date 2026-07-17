@@ -121,7 +121,7 @@ export function ExperienceSection() {
           </div>
 
           {/* Right: Activities */}
-          <div className="space-y-6">
+          <div className="space-y-6" id="activities">
             {activities.map((activity, index) => (
               <div
                 key={activity.organization}
