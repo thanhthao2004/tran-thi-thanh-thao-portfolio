@@ -436,7 +436,7 @@ Customer Insights Gathering: Talked directly with walk-in customers to understan
 
 Self-Improvement & Next Steps: Realized the importance of adapting my communication style for different audiences. Developed a personal preparation checklist for future client meetings, focusing on deep product research and audience analysis to present more confidently.`,
     highlights: ["Software Outsourcing", "Client Consultation", "Customer Insights"],
-    image: "/image/MTA_exhibit.jpg",
+    image: "/tran-thi-thanh-thao-portfolio/image/MTA_exhibit.jpg",
   },
   {
     organization: "AI Club - IUH",
